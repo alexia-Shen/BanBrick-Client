@@ -41,6 +41,11 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.editorconfig
+karma.conf.js
+protractor.conf.js
+e2e/
+tslint.json
 protractor.conf.js
 tslint.json
 e2e/
