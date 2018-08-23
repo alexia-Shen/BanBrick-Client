@@ -51,3 +51,4 @@ tslint.json
 e2e/
 .editorconfig
 karma.conf.js
+.vscode/

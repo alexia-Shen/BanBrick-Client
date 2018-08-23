@@ -1,5 +1,5 @@
-import {Http, Request, Response, RequestOptions, Headers, XHRBackend} from '@angular/http';
-import {Injectable} from '@angular/core';
+import { Http, Request, Response, RequestOptions, Headers, XHRBackend } from '@angular/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 
@@ -14,7 +14,7 @@ export class HttpClient extends Http {
 
   constructor(backend: XHRBackend, defaultOptions: RequestOptions, private _store: Store<any>) {
     super(backend, defaultOptions);
-    _store.select('user').distinctUntilChanged().subscribe(user => this._user = user);
+    _store.select('user').subscribe(user => this._user = user);
   }
 
   createHeader(headers: Headers) {
@@ -25,11 +25,10 @@ export class HttpClient extends Http {
   get(url: string, params?: Object): Observable<Response> {
     params = params || new Object;
     console.info('getting...', url, params);
-    let requestHeader = new Headers();
+    const requestHeader = new Headers();
     this.createHeader(requestHeader);
-    // attach 
-
-    let options = {
+    // attach
+    const options = {
       search: params,
       headers: requestHeader
     };
@@ -38,15 +37,13 @@ export class HttpClient extends Http {
 
   post(url: string, body?: Object): Observable<Response> {
     body = body || new Object;
-    // attach 
-
-    let requestHeader = new Headers();
+    // attach
+    const requestHeader = new Headers();
     this.createHeader(requestHeader);
-    let options = new RequestOptions({
+    const options = new RequestOptions({
       headers: requestHeader
     });
     console.info('posting...');
     return super.post(url, body, options);
-  };
-
+  }
 }
