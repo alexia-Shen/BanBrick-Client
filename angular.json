@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles/materialize/materialize.scss",
               "src/styles.css"
             ],
             "scripts": []

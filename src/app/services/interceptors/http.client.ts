@@ -1,6 +1,8 @@
 import { Http, Request, Response, RequestOptions, Headers, XHRBackend } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { distinctUntilChanged } from 'rxjs/operators';
+
 import { Store } from '@ngrx/store';
 
 @Injectable()
