@@ -1,6 +1,6 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AutoCompleteComponent } from '../../common';
+import { AutoCompleteComponent, NavComponent } from '@app/common';
 
 export interface SearchModel {
 
@@ -24,6 +24,11 @@ export class HomeComponent {
     autoComplete.onChange = (value) => { 
       return [{ display: 'abc', model: {} }, { display: 'bcd', model: {} }, { display: 'def', model: {} }] 
     };
+  }
+
+  @ViewChild(NavComponent)
+  set navbar(header: NavComponent) {
+    header.logoUrl = 'assets/logo.png';
   }
 
   private id;
