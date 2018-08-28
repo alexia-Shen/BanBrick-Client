@@ -8,7 +8,7 @@ import { NavItemComponent } from '@app/common';
 })
 export class NavComponent {
   @Input() logoUrl: string;
-  @Input() navItem: NavItemComponent;
+  @Input() navItems: NavItemComponent[] = [];
 
   constructor() {
 

@@ -1,5 +1,12 @@
-.home-title {
-    &__text {
-        color: red;
+.home {
+    &__wrapper{
+        height: 100vh;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    &__body {
+        flex: 1 0 auto;
     }
 }

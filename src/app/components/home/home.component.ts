@@ -1,6 +1,6 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AutoCompleteComponent, NavComponent } from '@app/common';
+import { AutoCompleteComponent, NavComponent, NavItemComponent } from '@app/common';
 
 export interface SearchModel {
 
